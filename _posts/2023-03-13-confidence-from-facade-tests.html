@@ -182,4 +182,19 @@ image_alt: "A root node fully filled in blue, indicating full code coverage by t
         </div>
         <div class="comment-date">2023-03-14 9:06 UTC</div>
     </div>
+    
+    <div class="comment" id="ae1faab5c652451787f4c652f265c45f">
+        <div class="comment-author"><a href="https://www.relativisticramblings.com/">Christer van der Meeren</a></div>
+        <div class="comment-content">
+            <blockquote><p>Isn't this a separate problem, though? If you're using Stubs and Spies to test interaction, and other tests to verify your implementations, then isn't that a similar problem?</p></blockquote>
+            <p>Indeed it is. The way I see it, the alternatives are:</p>
+            <ul>
+                <li><p>Considering the composition "too boring to test" (a <a href="http://xunitpatterns.com/Humble%20Object.html">humble object</a>, as you have referred to in previous articles). This, of course, does not solve the problem of testing the composed functions (i.e., the implementation details).</p></li>
+                <li><p>Testing the code exclusively through the public API (the root). Property-based tests might help here. However, given sufficiently complicated code (such as the code I described), I fail to see that this is feasible if wanting to test everything (e.g., if doing TDD).</p></li>
+                <li><p>Simply not testing everything; living with low test coverage and instead just doing "smoke tests", as it were, to verify that it's not <em>completely</em> broken.</p></li></p>
+            </ul>
+            <p>Testing implementation details as you describe may very well be the best solution. I am eagerly looking forward to your upcoming writings on this topic.</p>
+        </div>
+        <div class="comment-date">2023-03-14 09:30 UTC</div>
+    </div>
 </div>
